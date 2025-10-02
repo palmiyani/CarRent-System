@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Application Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+     <style>
+        body {
+            background-image: url({% static '/images/img_4.jpg' %});
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+     </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="text-center">Car Rental Application</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="first_name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" name="last_name" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="mobileNumber" class="form-label">Mobile Number</label>
+                                    <input type="tel" class="form-control" id="mobileNumber" name="mobile_number" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="driverLicense" class="form-label">Driver's License Number</label>
+                                <input type="text" class="form-control" id="driverLicense" name="driver_license_number" required>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="pickupLocation" class="form-label">Pickup Location</label>
+                                    <input type="text" class="form-control" id="pickupLocation" name="pickup_location" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="dropLocation" class="form-label">Drop Location</label>
+                                    <input type="text" class="form-control" id="dropLocation" name="drop_location" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="pickupDate" class="form-label">Pickup Date</label>
+                                    <input type="date" class="form-control" id="pickupDate" name="pickup_date" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="pickupTime" class="form-label">Pickup Time</label>
+                                    <input type="time" class="form-control" id="pickupTime" name="pickup_time" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="returnDate" class="form-label">Return Date</label>
+                                    <input type="date" class="form-control" id="returnDate" name="return_date" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="returnTime" class="form-label">Return Time</label>
+                                    <input type="time" class="form-control" id="returnTime" name="return_time" required>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Submit Application</button>
+                                <button type="reset" class="btn btn-secondary ms-2">Reset Form</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

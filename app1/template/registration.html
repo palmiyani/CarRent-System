@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <div class="ftco-blocks-cover-1">
+      <div class="ftco-cover-1 overlay" style="background-image: url({% static '/images/hero_1.jpg' %})">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-5 text-center">
+                  <h1 class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"><b>Sign up</b></h1>
+                  <form method="post">
+                      {% csrf_token %}
+                      <!-- Name input -->
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="text" placeholder="Your Name" name="fname" id="form2Example1" class="form-control" />
+                      </div>
+
+                      <!-- User input -->
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="text" placeholder="User Name" name="username" id="form2Example1" class="form-control" />
+                      </div>
+
+                      <!-- Email input -->
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="email" placeholder="Your Email" name="email" id="form2Example2" class="form-control" />
+                      </div>
+
+                      <!-- Password input -->
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="password" placeholder="Password" name="pass1" id="form2Example1" class="form-control" />
+                      </div>
+
+                      <!-- Repeat Password input -->
+                      <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="password" placeholder="Repeat your password" id="form2Example2" class="form-control" />
+                      </div>
+
+                      <!-- 2 column grid layout for inline styling -->
+                      <div class="row mb-4">
+                        <div class="col d-flex justify-content-center">
+                          <!-- Checkbox -->
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                            <label class="form-check-label text-white " for="form2Example31"> <b>I agree all statements in</b><a href="#!"><b>Terms of service</b></a> </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Submit button -->
+                      <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Register </button>
+
+                  </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}
