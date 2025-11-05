@@ -117,7 +117,6 @@ Then open your browser and go to 👉 **http://127.0.0.1:8000/**
 
 ## 👨‍💻 Author
 
-Developed as part of a **Python Django learning project** to demonstrate
-full-stack web development skills using Django and Python.
+
 
 ------------------------------------------------------------------------
