@@ -117,6 +117,8 @@ Then open your browser and go to 👉 **http://127.0.0.1:8000/**
 
 ## 👨‍💻 Author
 
+**Created by [Pal Miyani](https://github.com/palmiyani)**  
+🌟 Star this repo if you found it useful!
 
 
 ------------------------------------------------------------------------
