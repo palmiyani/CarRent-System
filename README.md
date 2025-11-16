@@ -1,5 +1,4 @@
 # PythonProject2 🐍
-
 A **Django-based web application** developed using Python for backend
 logic and HTML/CSS for frontend rendering.\
 This project demonstrates modern web development concepts such as
